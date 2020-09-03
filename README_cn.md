@@ -26,10 +26,10 @@ git 命令带了 --recursive 参数后会克隆包括子模块在内的所有仓
   git clone https://gitee.com/EspressifSystems/submodule-update.git
   ```
 
-  为了方面后面使用，可以 export submodule-updata 路径，如：
+  为了方面后面使用，可以 export submodule-update 路径，如：
 
   ```shell
-  cd submodule-updata
+  cd submodule-update
   export SU_PATH=$(pwd)
   ```
 
@@ -43,7 +43,7 @@ git 命令带了 --recursive 参数后会克隆包括子模块在内的所有仓
 
 - Step 3：
 
-  进入 esp-idf 目录执行 submodule-updata 脚本：
+  进入 esp-idf 目录执行 submodule-update 脚本：
 
   ```shell
   cd esp-idf
