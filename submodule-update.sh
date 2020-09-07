@@ -51,7 +51,6 @@ pushd ${REPO_DIR} >/dev/null
 # 1
 git submodule init
 
-
 # 2
 # Replacing each submodule URL of the current repository
 # to the mirror repos in gitee
@@ -63,14 +62,14 @@ do
     for ((i=0;i<len;i+=2))
     do
         REPO=${REPOS_ARRAY[i]}
-	GROUP=${REPOS_ARRAY[i+1]}
+        GROUP=${REPOS_ARRAY[i+1]}
 
         if [ "$LOCATION" = "$REPO" ]; then
-	    SUBURL="https://gitee.com/$GROUP/$LOCATION"
-	    break
+            SUBURL="https://gitee.com/$GROUP/$LOCATION"
+            break
         else
             SUBURL="https://gitee.com/esp-submodules/$LOCATION"
-	fi
+        fi
     done
 
     git config submodule."${SUBPATH}".url "${SUBURL}"
