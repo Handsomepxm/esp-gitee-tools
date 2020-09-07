@@ -27,9 +27,9 @@ die() {
 ERR_CANNOT_UPDATE=13
 
 REPO_DIR=${1:-"${PWD}"}
-REPO_DIR=$(readlink -f -- "${REPO_DIR}")
+REPO_DIR=$(cd ${REPO_DIR} && pwd -P)
 
-SCRIPT_SH=$(readlink -f -- "${0}")
+SCRIPT_SH=$(cd "$(dirname "${0}")" && pwd -P)/$(basename "${0}")
 
 [ -d "${REPO_DIR}" ] || die "${REPO_DIR} is not directory!"
 [ -f "${SCRIPT_SH}" ] || die "${SCRIPT_SH} does not exist!"
