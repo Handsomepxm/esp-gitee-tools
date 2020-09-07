@@ -78,7 +78,7 @@ done
 
 # 3
 # Getting submodules of the current repository from gitee mirrors
-git submodule update || exit $ERR_CANNOT_UPDATE
+git submodule update --progress || exit $ERR_CANNOT_UPDATE
 
 # 4
 # Replacing URLs for each sub-submodule.
